@@ -3,6 +3,10 @@ from django.views import View
 from django.http import HttpResponse
 
 # Create your views here.
+def index(request):
+    return render(request, 'index.html')
+
+
 class squaringView(View):
     def get(self, request, number):
         print(request.__dir__())
